@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="32" fill="#1A1A1A"/>
+  <circle cx="96" cy="96" r="48" fill="none" stroke="#D4AF37" stroke-width="6"/>
+  <ellipse cx="68" cy="82" rx="18" ry="26" fill="none" stroke="#FFFDF9" stroke-width="3"/>
+  <ellipse cx="124" cy="82" rx="18" ry="26" fill="none" stroke="#FFFDF9" stroke-width="3"/>
+  <line x1="86" y1="108" x2="106" y2="108" stroke="#D4AF37" stroke-width="2"/>
+  <text x="96" y="160" text-anchor="middle" font-family="serif" font-size="16" fill="#D4AF37" font-style="italic">Gem</text>
+</svg>
