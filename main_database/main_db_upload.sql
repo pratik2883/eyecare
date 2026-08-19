@@ -1,13 +1,13 @@
--- ============================================================
+﻿-- ============================================================
 -- main_db_upload.sql
 -- Merged MySQL dump for optical_db
--- Generated from individual table dumps
+-- Regenerated on 2026-08-19 23:07:45
 -- ============================================================
 
 -- ============================================================
 -- SOURCE FILE: optical_db_banners.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -16,7 +16,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -65,13 +65,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:45
 
 -- ============================================================
 -- SOURCE FILE: optical_db_brands.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -80,7 +79,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -130,13 +129,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:45
 
 -- ============================================================
 -- SOURCE FILE: optical_db_cache.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -145,7 +143,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -175,7 +173,7 @@ CREATE TABLE `cache` (
 
 LOCK TABLES `cache` WRITE;
 /*!40000 ALTER TABLE `cache` DISABLE KEYS */;
-INSERT INTO `cache` VALUES ('gem-opticians-cache-filter_options','a:8:{s:6:\"brands\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:58:{i:59;s:5:\"ALCON\";i:49;s:15:\"ARMANI EXCHANGE\";i:63;s:4:\"BAND\";i:57;s:14:\"BAUSH AND LOMB\";i:21;s:8:\"BURBERRY\";i:32;s:12:\"CALVIN KLEIN\";i:41;s:7:\"CARRERA\";i:16;s:7:\"CARTIER\";i:61;s:4:\"CASE\";i:60;s:4:\"CEPL\";i:65;s:6:\"CLIPON\";i:46;s:15:\"DOLCE & GABBANA\";i:20;s:13:\"DOLCE&GABBANA\";i:25;s:4:\"ELLE\";i:40;s:14:\"EMPORIO ARMANI\";i:26;s:6:\"ESPRIT\";i:51;s:7:\"FERRARI\";i:24;s:4:\"FILA\";i:28;s:17:\"FRENCH CONNECTION\";i:29;s:5:\"GUCCI\";i:23;s:5:\"GUESS\";i:45;s:6:\"JAGUAR\";i:58;s:19:\"JOHNSON AND JOHNSON\";i:38;s:7:\"LACOSTE\";i:47;s:11:\"MARC JACOBS\";i:42;s:8:\"MAUI JIM\";i:27;s:12:\"MICHAEL KORS\";i:15;s:9:\"MONTBLANC\";i:31;s:4:\"NIKE\";i:39;s:6:\"OAKLEY\";i:50;s:16:\"OAKLEY META HSTN\";i:18;s:6:\"PERSOL\";i:48;s:8:\"POLAROID\";i:22;s:6:\"POLICE\";i:35;s:5:\"PRADA\";i:30;s:4:\"PUMA\";i:44;s:6:\"RAYBAN\";i:56;s:14:\"RAYBAN FERRARI\";i:55;s:25:\"RAYBAN META GEN-2 BLAYZER\";i:53;s:27:\"RAYBAN META GEN-2 HEADLINER\";i:54;s:25:\"RAYBAN META GEN-2 SCRIBER\";i:52;s:25:\"RAYBAN META GEN-2 WAYFARE\";i:70;s:14:\"SAFETY GLASSES\";i:17;s:9:\"SALVATORE\";i:14;s:9:\"SILHOUTTE\";i:68;s:14:\"SPECTACLE CASE\";i:62;s:5:\"SPRAY\";i:37;s:7:\"STEPPER\";i:66;s:8:\"STERICON\";i:64;s:9:\"SUPPORTER\";i:19;s:9:\"SWAROVSKI\";i:69;s:16:\"SWIMMING GLASSES\";i:13;s:7:\"TOMFORD\";i:33;s:14:\"TOMMY HILFIGER\";i:36;s:25:\"UNITED COLORS OF BENETTON\";i:34;s:7:\"VERSACE\";i:43;s:5:\"VOGUE\";i:67;s:5:\"ZEISS\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:7:\"genders\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:3:{i:0;s:6:\"FEMALE\";i:1;s:4:\"MALE\";i:2;s:6:\"UNISEX\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:12:\"frame_shapes\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:8:{i:0;s:7:\"AVIATOR\";i:1;s:7:\"CAT EYE\";i:2;s:4:\"HEXA\";i:3;s:4:\"OVAL\";i:4;s:9:\"RECTANGLE\";i:5;s:5:\"ROUND\";i:6;s:6:\"SQUARE\";i:7;s:4:\"WRAP\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:15:\"frame_materials\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:10:{i:0;s:10:\"HILAFILCON\";i:1;s:5:\"METAL\";i:2;s:11:\"NELFILCON A\";i:3;s:7:\"PLASTIC\";i:4;s:7:\"RIMLESS\";i:5;s:6:\"RUBBER\";i:6;s:10:\"SENOFILCON\";i:7;s:16:\"SILICON HYDROGEL\";i:8;s:5:\"SUPRA\";i:9;s:5:\"THRED\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:12:\"frame_colors\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:20:{i:0;s:5:\"BEIGE\";i:1;s:5:\"BLACK\";i:2;s:4:\"BLUE\";i:3;s:5:\"BROWN\";i:4;s:6:\"COPPER\";i:5;s:4:\"GOLD\";i:6;s:5:\"GREEN\";i:7;s:4:\"GREY\";i:8;s:3:\"GUN\";i:9;s:8:\"MULTIPLE\";i:10;s:6:\"ORANGE\";i:11;s:4:\"PICH\";i:12;s:4:\"PINK\";i:13;s:6:\"PURPLE\";i:14;s:3:\"RED\";i:15;s:6:\"SILVER\";i:16;s:8:\"TORTOISE\";i:17;s:11:\"TRANSPARENT\";i:18;s:5:\"WHITE\";i:19;s:6:\"YELLOW\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:11:\"frame_sizes\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:44:{i:0;s:3:\"120\";i:1;s:6:\"120 ML\";i:2;s:3:\"130\";i:3;s:3:\"135\";i:4;s:3:\"139\";i:5;s:3:\"140\";i:6;s:6:\"300 ML\";i:7;s:6:\"355 ML\";i:8;s:2:\"36\";i:9;s:2:\"39\";i:10;s:2:\"40\";i:11;s:2:\"43\";i:12;s:2:\"44\";i:13;s:2:\"45\";i:14;s:2:\"46\";i:15;s:2:\"47\";i:16;s:2:\"48\";i:17;s:2:\"49\";i:18;s:2:\"50\";i:19;s:6:\"500 ML\";i:20;s:2:\"51\";i:21;s:2:\"52\";i:22;s:2:\"53\";i:23;s:2:\"54\";i:24;s:2:\"55\";i:25;s:2:\"56\";i:26;s:2:\"57\";i:27;s:2:\"58\";i:28;s:2:\"59\";i:29;s:2:\"60\";i:30;s:5:\"60 ML\";i:31;s:2:\"61\";i:32;s:2:\"62\";i:33;s:2:\"63\";i:34;s:2:\"64\";i:35;s:2:\"65\";i:36;s:2:\"67\";i:37;s:2:\"72\";i:38;s:4:\"8 ML\";i:39;s:2:\"87\";i:40;s:5:\"90 ML\";i:41;s:10:\"BC 8.4,8.8\";i:42;s:10:\"BC 8.5,9.0\";i:43;s:6:\"BC 8.6\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:10:\"categories\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:5:{i:0;s:11:\"accessories\";i:1;s:14:\"contact_lenses\";i:2;s:10:\"eyeglasses\";i:3;s:4:\"kids\";i:4;s:10:\"sunglasses\";}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:11:\"price_range\";a:2:{s:3:\"min\";d:50;s:3:\"max\";d:84450;}}',1786874177),('gem-opticians-cache-store_settings','a:6:{s:10:\"store_name\";s:14:\"EyeCare Studio\";s:13:\"store_tagline\";s:9:\"Est. 1969\";s:8:\"app_name\";s:14:\"EyeCare Studio\";s:24:\"section_categories_title\";s:10:\"Categories\";s:20:\"section_offers_title\";s:19:\"Offers & Highlights\";s:24:\"section_collection_title\";s:14:\"Our Collection\";}',1786874142);
+INSERT INTO `cache` VALUES ('gem-opticians-cache-store_settings','a:18:{s:10:\"store_name\";s:14:\"EyeCare Studio\";s:13:\"store_tagline\";s:9:\"Est. 1969\";s:8:\"app_name\";s:14:\"EyeCare Studio\";s:24:\"section_categories_title\";s:10:\"Categories\";s:20:\"section_offers_title\";s:19:\"Offers & Highlights\";s:24:\"section_collection_title\";s:14:\"Our Collection\";s:15:\"social_facebook\";s:25:\"https://www.facebook.com/\";s:16:\"social_instagram\";s:26:\"https://www.instagram.com/\";s:15:\"social_whatsapp\";s:0:\"\";s:14:\"social_youtube\";s:24:\"https://www.youtube.com/\";s:13:\"trust_1_title\";s:14:\"100% Authentic\";s:12:\"trust_1_text\";s:23:\"Authorized brand dealer\";s:13:\"trust_2_title\";s:12:\"Free Fitment\";s:12:\"trust_2_text\";s:22:\"Complimentary at store\";s:13:\"trust_3_title\";s:11:\"Best Prices\";s:12:\"trust_3_text\";s:22:\"Store-exclusive offers\";s:15:\"social_linkedin\";s:0:\"\";s:14:\"social_twitter\";s:0:\"\";}',1787162575);
 /*!40000 ALTER TABLE `cache` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -188,13 +186,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:45
 
 -- ============================================================
 -- SOURCE FILE: optical_db_cache_locks.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -203,7 +200,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -245,13 +242,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:57
-
+-- Dump completed on 2026-08-19 23:07:45
 
 -- ============================================================
 -- SOURCE FILE: optical_db_categories.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -260,7 +256,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -309,13 +305,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_color_material_mappings.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -324,7 +319,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -370,13 +365,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_colors.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -385,7 +379,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -432,13 +426,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_failed_jobs.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -447,7 +440,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -493,13 +486,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_inventory.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -508,7 +500,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -587,13 +579,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:54
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_inventory_changes.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -602,7 +593,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -650,13 +641,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:57
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_job_batches.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -665,7 +655,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -713,13 +703,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_jobs.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -728,7 +717,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -774,13 +763,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:54
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_materials.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -789,7 +777,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -835,13 +823,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_menu_items.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -850,7 +837,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -867,7 +854,7 @@ DROP TABLE IF EXISTS `menu_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `menu_items` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'custom',
   `ref` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -877,7 +864,7 @@ CREATE TABLE `menu_items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -886,7 +873,7 @@ CREATE TABLE `menu_items` (
 
 LOCK TABLES `menu_items` WRITE;
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
-INSERT INTO `menu_items` VALUES (1,'NEW ARRIVALS','collection','{\"is_new_arrival\":1}',NULL,NULL,1,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(2,'SUNGLASSES','category','sunglasses',NULL,NULL,2,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(3,'EYEGLASSES','category','eyeglasses',NULL,NULL,3,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(4,'SHOP BY BRAND','brands',NULL,NULL,NULL,4,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(5,'KIDS','category','kids',NULL,NULL,5,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(6,'SALE','collection','{\"is_on_sale\":1}',NULL,NULL,6,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(7,'CONTACT LENSES','category','contact_lenses',NULL,NULL,7,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(8,'ACCESSORIES','category','accessories',NULL,NULL,8,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(9,'CUSTOMER REVIEWS','custom',NULL,'#',NULL,9,1,'2026-08-06 11:52:12','2026-08-06 11:52:12');
+INSERT INTO `menu_items` VALUES (1,'NEW ARRIVALS','collection','{\"is_new_arrival\":1}',NULL,NULL,1,1,'2026-08-06 11:52:12','2026-08-19 11:46:29'),(2,'SUNGLASSES','category','sunglasses',NULL,NULL,2,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(3,'EYEGLASSES','category','eyeglasses',NULL,NULL,3,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(4,'SHOP BY BRAND','brands',NULL,NULL,NULL,4,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(5,'KIDS','category','kids',NULL,NULL,5,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(6,'SALE','collection','{\"is_on_sale\":1}',NULL,NULL,6,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(7,'CONTACT LENSES','category','contact_lenses',NULL,NULL,7,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(8,'ACCESSORIES','category','accessories',NULL,NULL,8,1,'2026-08-06 11:52:12','2026-08-06 11:52:12'),(9,NULL,'custom','{\"is_new_arrival\":1}','http://127.0.0.1:8000/product/0101-00311-62','/storage/menu/54e6qyTSjEDIvQr4mWhbzDiANsCaQQdWxex0QoyM.png',9,1,'2026-08-06 11:52:12','2026-08-19 11:50:03');
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -899,13 +886,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:54
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_migrations.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -914,7 +900,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -934,7 +920,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -943,7 +929,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2026_07_23_182618_create_personal_access_tokens_table',1),(5,'2026_07_23_190000_create_brands_table',2),(6,'2026_07_23_190001_create_inventory_table',2),(7,'2026_07_24_010000_create_categories_table',3),(8,'2026_07_24_020000_add_about_brand_to_inventory',4),(9,'2026_07_24_030000_add_filter_indexes_and_fulltext_to_inventory',5),(10,'2026_07_25_164324_make_banners_title_and_image_url_nullable',6),(11,'2026_07_31_000001_change_inventory_brand_fk_to_restrict',7),(12,'2026_08_06_100000_create_menu_items_table',8),(13,'2026_08_14_000001_create_settings_table',9),(14,'2026_08_14_000002_create_inventory_changes_table',10),(15,'2026_08_14_000003_add_slug_to_inventory_table',11);
+INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2026_07_23_182618_create_personal_access_tokens_table',1),(5,'2026_07_23_190000_create_brands_table',2),(6,'2026_07_23_190001_create_inventory_table',2),(7,'2026_07_24_010000_create_categories_table',3),(8,'2026_07_24_020000_add_about_brand_to_inventory',4),(9,'2026_07_24_030000_add_filter_indexes_and_fulltext_to_inventory',5),(10,'2026_07_25_164324_make_banners_title_and_image_url_nullable',6),(11,'2026_07_31_000001_change_inventory_brand_fk_to_restrict',7),(12,'2026_08_06_100000_create_menu_items_table',8),(13,'2026_08_14_000001_create_settings_table',9),(14,'2026_08_14_000002_create_inventory_changes_table',10),(15,'2026_08_14_000003_add_slug_to_inventory_table',11),(16,'2026_08_19_171830_make_menu_items_label_nullable',12);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -956,13 +942,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_password_reset_tokens.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -971,7 +956,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1012,13 +997,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:55
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_personal_access_tokens.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1027,7 +1011,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1078,13 +1062,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:57
-
+-- Dump completed on 2026-08-19 23:07:46
 
 -- ============================================================
 -- SOURCE FILE: optical_db_promos.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1093,7 +1076,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1143,13 +1126,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:57
-
+-- Dump completed on 2026-08-19 23:07:47
 
 -- ============================================================
 -- SOURCE FILE: optical_db_sessions.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1158,7 +1140,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1192,7 +1174,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('puMzoz3tPAjF1OTscBMxc8CqN081wUUDjjprXn5C',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiY3paOThKQkdRMnAzaXlHUDkxMWxDV0JWRFZKSm90SkhMbDRodFZpeiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbiI7czo1OiJyb3V0ZSI7czoxNToiYWRtaW4uZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1786870566),('t6JngU9mtCfpmFELdWJVpGqyYnDadQ36H8lZ7v4p',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoicXNLVkhiejVrV2dmN2daZGd3d0s0RGd6czFlOEF3bXQyZ2RzUzIxNiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jYXRlZ29yeS9leWVnbGFzc2VzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1786871141),('VwsmNKFwM1qf2WGPNiF1DJv1Rj5GIsny1hhQBF7t',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiMkpkM0dhRXRWRVUwVURhWVphQU9JOHJNeW1PbUp1bDNRc3loSDZTbyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1786870542);
+INSERT INTO `sessions` VALUES ('6bRgcRRwElMHauo6nhtMWteqkXpuBEAZ65pzz6Bk',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiamJ4cjZ2cnpRR0R0bXF0TG5LT0NWdWI1Z01KaTlmdDcxMUlBZmZtQSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyOCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787159598),('AFX62Q9ClFjJsXCplO0Bb3xmUf2FcJ5Vng9XisaR',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiSXhoSUNtQ0hLaFY2bVNpRGd4cTZTVVBreFBzbkZvd0lraFZxcUw0WCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMy9jYXRlZ29yeS9zdW5nbGFzc2VzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1787157417),('anbpDomFxqxvDCattWA9J8fDUnrTAAtBWafJLsjk',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiVUNlamR5N296Z2NTbGFuVzdpY3lsZW8yUU9XQjdEV2JBcW5KZEx5diI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787157393),('CJUgPkUhVVakHR8QdArcbliFYWRatOt4ieWEPnvY',1,'127.0.0.1','curl/8.21.0','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiOFFzZTg2MDQzTjdNUm54YmRDNE50TnhuNWJJcXRVanA2NG45UE9SWCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyOS9hZG1pbi9tZW51IjtzOjU6InJvdXRlIjtzOjE2OiJhZG1pbi5tZW51LmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1787159762),('CPLvnVPDqGJs2iquMZAdnsMRfhSQng2TeHyxlLjp',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiMzdKN3Z1Z1o2TGNTeUhBOXh1T0dFV2dqUGh4N3kwUVJHUnhjeVhzWiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyNyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787159543),('dNfjaFOmBHJtrFKdCGJExoPdCgVFEi9JsJr5FAeB',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiRE5Rc0RaUDFqT1NKQjhtcWd2WU9DQU1HekFMdDFEMGt6TU5ETVN4OCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMy9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czoxMToiYWRtaW4ubG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1787157405),('ekucPiQHPmfQCuRLNMJaFspgFRGH2Bx3EANdKuxB',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiR3E4cnA4QW9RS2hrcm5QamNWbDlZZTFOalBTTkJ0S1hmMFF4THJieSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEzMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787159949),('Ic30HNQOsHpbOZxY5r5OescUUe1mvagM7cjnAK6c',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiUUl1Zm1vMnZ3cktXT1pZajZsdnRxaGtpWU0zaXNHVklBNUFxWGtYWSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMy9jYXRlZ29yeS9leWVnbGFzc2VzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1787157416),('mrgGjIzhvPMcWTS15wQLWCkOda2887FUKmbHbjYT',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoidlZxVDVvNFpka0lET2k5S2hiSVB2RjJNOUVhRnJ6WnYyQnhjVVpURSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jYXRlZ29yeS9zdW5nbGFzc2VzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1787160025),('nOpnNGJcfFzJOj4UIqGVbQ7mZvBs1Dmvizzsqau5',1,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiYWlETHRCVmdtc2NCOWU5bVd2NVdXQmd6V2VvZmVsS056Nm9xaXUyeSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyOS9hZG1pbi9tZW51IjtzOjU6InJvdXRlIjtzOjE2OiJhZG1pbi5tZW51LmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1787159624),('O6V5H1onkz1dhclDApojxB2IbYQsfkfdTWk4Pd9q',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiOExxTW9lbXJwWmRzMWV4QTRrbVVMQkI5d1ZZNEFZYmZmc01aSlprdyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyNSI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787158453),('puMzoz3tPAjF1OTscBMxc8CqN081wUUDjjprXn5C',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiY3paOThKQkdRMnAzaXlHUDkxMWxDV0JWRFZKSm90SkhMbDRodFZpeiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbiI7czo1OiJyb3V0ZSI7czoxNToiYWRtaW4uZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1786870566),('t6JngU9mtCfpmFELdWJVpGqyYnDadQ36H8lZ7v4p',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoicXNLVkhiejVrV2dmN2daZGd3d0s0RGd6czFlOEF3bXQyZ2RzUzIxNiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jYXRlZ29yeS9leWVnbGFzc2VzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1786871141),('U6AOlB0QLUUa6a1zpVm47NF6Z48kMtjxXBZPlrWR',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiTlVzcmVwb2RCV1pyZkpTZjdWN3Z4WndhVmpFc0x2aEJTSjRuNUk4cCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMy9tYW5pZmVzdC5qc29uIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1787157404),('unPmhE3Lsjl44o6fmqdBWsjxWqZ3vuBd0b6y5n12',1,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSWx2WkFHcENXTm54ZGZ2cDREOFU0WDlOY3dLMjlrVVVKR3VJZnZIeCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyOS9hZG1pbi9tZW51IjtzOjU6InJvdXRlIjtzOjE2OiJhZG1pbi5tZW51LmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1787159644),('VwsmNKFwM1qf2WGPNiF1DJv1Rj5GIsny1hhQBF7t',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiMkpkM0dhRXRWRVUwVURhWVphQU9JOHJNeW1PbUp1bDNRc3loSDZTbyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1786870542),('WqFB0pCi8AsMhmoSNVJ05tvbYYLGys7T0xl9CuWy',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoibEFhRE5nTnNVSGxHWUI1aE93R3c4QmUyb00yWlk1d0VSUzRLYURNcSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDI6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyMy9wcm9kdWN0LzAwMTgxLTAxYi01MiI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787157415),('xmzMhFYm2GKyUYU7wR4dR71EOkrhAs3DER4UKdyZ',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiQWFGVVUyMVlaSElNZHE2UUVPbGFVaVBzeFJWdkdYN0JlSXJNeWlHZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyNiI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787158809),('ydSEojOcDc0noUtvnZIq6FSN6RKov8zULgK3If8c',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiYzl3VWp4YkxuYTFkU1RxVXJkdkNKeDkxZmZVZ2lkR3U0ZFVoNGl1QSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9tZW51IjtzOjU6InJvdXRlIjtzOjE2OiJhZG1pbi5tZW51LmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1787160003),('Zzd4FMzeProX5Ok4NBLGjFYIJryOd7h86ik80Y2o',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.9168','YTozOntzOjY6Il90b2tlbiI7czo0MDoiN2owekN4Q2wyc3dJV2xBd01UcmdQZjZFN1NNdWtEeUNMTWoyUUFZUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODEyOSI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1787159746);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1205,13 +1187,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:47
 
 -- ============================================================
 -- SOURCE FILE: optical_db_settings.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1220,7 +1201,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1243,7 +1224,7 @@ CREATE TABLE `settings` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `settings_key_unique` (`key`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1252,7 +1233,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES (1,'store_name','EyeCare Studio','2026-08-14 12:48:23','2026-08-14 12:48:23'),(2,'store_tagline','Est. 1969','2026-08-14 12:48:23','2026-08-14 12:48:23'),(3,'app_name','EyeCare Studio','2026-08-14 12:48:23','2026-08-14 12:48:23'),(4,'section_categories_title','Categories','2026-08-14 12:48:23','2026-08-14 12:48:23'),(5,'section_offers_title','Offers & Highlights','2026-08-14 12:48:23','2026-08-14 12:48:23'),(6,'section_collection_title','Our Collection','2026-08-14 12:48:23','2026-08-14 12:48:23');
+INSERT INTO `settings` VALUES (1,'store_name','EyeCare Studio','2026-08-14 12:48:23','2026-08-14 12:48:23'),(2,'store_tagline','Est. 1969','2026-08-14 12:48:23','2026-08-14 12:48:23'),(3,'app_name','EyeCare Studio','2026-08-14 12:48:23','2026-08-14 12:48:23'),(4,'section_categories_title','Categories','2026-08-14 12:48:23','2026-08-14 12:48:23'),(5,'section_offers_title','Offers & Highlights','2026-08-14 12:48:23','2026-08-14 12:48:23'),(6,'section_collection_title','Our Collection','2026-08-14 12:48:23','2026-08-14 12:48:23'),(7,'social_facebook','https://www.facebook.com/','2026-08-19 11:29:57','2026-08-19 11:32:54'),(8,'social_instagram','https://www.instagram.com/','2026-08-19 11:29:57','2026-08-19 11:32:54'),(9,'social_whatsapp','','2026-08-19 11:29:57','2026-08-19 11:30:16'),(10,'social_youtube','https://www.youtube.com/','2026-08-19 11:29:57','2026-08-19 11:32:55'),(11,'trust_1_title','100% Authentic','2026-08-19 11:32:54','2026-08-19 11:32:54'),(12,'trust_1_text','Authorized brand dealer','2026-08-19 11:32:54','2026-08-19 11:32:54'),(13,'trust_2_title','Free Fitment','2026-08-19 11:32:54','2026-08-19 11:32:54'),(14,'trust_2_text','Complimentary at store','2026-08-19 11:32:54','2026-08-19 11:32:54'),(15,'trust_3_title','Best Prices','2026-08-19 11:32:54','2026-08-19 11:32:54'),(16,'trust_3_text','Store-exclusive offers','2026-08-19 11:32:54','2026-08-19 11:32:54'),(17,'social_linkedin','','2026-08-19 11:32:55','2026-08-19 11:32:55'),(18,'social_twitter','','2026-08-19 11:32:55','2026-08-19 11:32:55');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1265,13 +1246,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:57
-
+-- Dump completed on 2026-08-19 23:07:47
 
 -- ============================================================
 -- SOURCE FILE: optical_db_shapes.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1280,7 +1260,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1325,13 +1305,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:47
 
 -- ============================================================
 -- SOURCE FILE: optical_db_sync_logs.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1340,7 +1319,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1387,13 +1366,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:56
-
+-- Dump completed on 2026-08-19 23:07:47
 
 -- ============================================================
 -- SOURCE FILE: optical_db_users.sql
 -- ============================================================
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: optical_db
 -- ------------------------------------------------------
@@ -1402,7 +1380,7 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1450,5 +1428,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-16 14:39:54
+-- Dump completed on 2026-08-19 23:07:47
 
