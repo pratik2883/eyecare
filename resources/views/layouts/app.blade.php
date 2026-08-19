@@ -269,7 +269,7 @@
                                     <h3 class="product-brand">${escapeHtml(p.brand?.name || 'Luxury Brand')}</h3>
                                     <p class="product-model">${escapeHtml(p.model_number)}</p>
                                     <p class="product-price">
-                                        ${p.sale_price ? `<span class="original">₹${Number(p.price).toLocaleString()}</span> ₹${Number(p.sale_price).toLocaleString()}` : `₹${Number(p.price).toLocaleString()}`}
+${p.sale_price && Number(p.sale_price) < Number(p.price) ? `<span class="original">₹${Number(p.price).toLocaleString()}</span> ₹${Number(p.sale_price).toLocaleString()}` : `₹${Number(p.price).toLocaleString()}`}
                                     </p>
                                     <div class="card-actions">
                                         <button class="btn-view-more" onclick="window.location='/product/${p.slug || p.id}'">View More</button>
@@ -700,7 +700,7 @@
                         <div class="cart-item-info">
                             <span class="cart-item-brand">${escapeHtml(c.brand_name || '')}</span>
                             <span class="cart-item-model">${escapeHtml(c.model_number)}</span>
-                            <span class="cart-item-price">${cartMoney(unit)}${(c.sale_price && Number(c.sale_price) > 0) ? `<small class="cart-item-old">${cartMoney(c.price)}</small>` : ''}</span>
+                            <span class="cart-item-price">${cartMoney(unit)}${(c.sale_price && Number(c.sale_price) > 0 && Number(c.sale_price) < Number(c.price)) ? `<small class="cart-item-old">${cartMoney(c.price)}</small>` : ''}</span>
                             <div class="cart-item-controls">
                                 <div class="cart-qty">
                                     <button onclick="setCartQty(${c.id}, ${qty - 1})" aria-label="Decrease">&minus;</button>
@@ -971,7 +971,7 @@ if (ticker) {
                         <h3 class="product-brand">${escapeHtml(p.brand?.name || 'Luxury Brand')}</h3>
                         <p class="product-model">${escapeHtml(p.model_number)}</p>
                         <p class="product-price">
-                            ${p.sale_price ? `<span class="original">₹${Number(p.price).toLocaleString()}</span> ₹${Number(p.sale_price).toLocaleString()}` : `₹${Number(p.price).toLocaleString()}`}
+                            ${p.sale_price && Number(p.sale_price) < Number(p.price) ? `<span class="original">₹${Number(p.price).toLocaleString()}</span> ₹${Number(p.sale_price).toLocaleString()}` : `₹${Number(p.price).toLocaleString()}`}
                         </p>
                         <div class="card-actions">
                             <button class="btn-view-more" onclick="window.location='/product/${p.slug || p.id}'">View More</button>

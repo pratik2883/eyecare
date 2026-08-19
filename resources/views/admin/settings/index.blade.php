@@ -89,6 +89,31 @@
         </div>
     </div>
 
+    <div class="card" style="margin-top:16px">
+        <div class="card-header"><h3>Social Media Links</h3></div>
+        <div class="card-body">
+            <p style="color:var(--text-light);font-size:.82rem;margin-top:0">Shown as icons at the bottom of the store menu (sidebar). Leave a field blank to hide that icon.</p>
+            @php
+                $socials = [
+                    'social_facebook' => ['fab fa-facebook-f', 'Facebook', '#1877F2'],
+                    'social_instagram' => ['fab fa-instagram', 'Instagram', '#E4405F'],
+                    'social_youtube' => ['fab fa-youtube', 'YouTube', '#FF0000'],
+                    'social_linkedin' => ['fab fa-linkedin-in', 'LinkedIn', '#0A66C2'],
+                    'social_whatsapp' => ['fab fa-whatsapp', 'WhatsApp', '#25D366'],
+                    'social_twitter' => ['fab fa-x-twitter', 'X (Twitter)', '#000000'],
+                ];
+            @endphp
+            <div class="form-row">
+                @foreach($socials as $key => [$icon, $label, $color])
+                <div class="form-group">
+                    <label><i class="{{ $icon }}" style="color:{{ $color }}"></i>&nbsp; {{ $label }} Link</label>
+                    <input type="url" name="{{ $key }}" class="form-control" value="{{ setting($key, '') }}" placeholder="https://...">
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
     <div style="margin-top:20px">
         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Settings</button>
     </div>

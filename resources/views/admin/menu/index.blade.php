@@ -12,7 +12,7 @@
         <div class="table-wrapper">
             <table>
                 <thead>
-                    <tr><th>Order</th><th>Label</th><th>Type</th><th>Target</th><th>Status</th><th>Actions</th></tr>
+                    <tr><th>Order</th><th>Icon</th><th>Label</th><th>Type</th><th>Target</th><th>Status</th><th>Actions</th></tr>
                 </thead>
                 <tbody>
                     @forelse($items as $item)
@@ -23,17 +23,24 @@
                                 <form action="{{ route('admin.menu.reorder') }}" method="POST">@csrf<input type="hidden" name="id" value="{{ $item->id }}"><input type="hidden" name="direction" value="down"><button class="btn btn-sm btn-secondary" title="Move down" {{ $loop->last ? 'disabled' : '' }}><i class="fas fa-chevron-down"></i></button></form>
                             </div>
                         </td>
+                        <td>
+                            @if($item->icon)
+                            <img src="{{ $item->icon }}" alt="{{ $item->label }}" style="width:32px;height:32px;object-fit:contain;border-radius:6px;padding:2px;background:var(--warm-white,#fff);border:1px solid rgba(0,0,0,.08)">
+                            @else
+                            <span style="color:var(--text-light)">—</span>
+                            @endif
+                        </td>
                         <td><strong>{{ $item->label }}</strong></td>
                         <td><span class="badge badge-plum">{{ ucwords(str_replace('_', ' ', $item->type)) }}</span></td>
                         <td style="font-family:monospace;font-size:.75rem;color:var(--text-secondary)">{{ $item->type === 'custom' ? $item->link_url : ($item->ref ?: '—') }}</td>
                         <td><span class="badge badge-{{ $item->is_active ? 'success' : 'default' }}">{{ $item->is_active ? 'Active' : 'Inactive' }}</span></td>
                         <td>
-                            <button class="btn btn-sm btn-secondary" onclick="editMenuItem({{ $item->id }},{{ json_encode($item->label) }},{{ json_encode($item->type) }},{{ json_encode($item->ref) }},{{ json_encode($item->link_url) }},{{ $item->is_active ? 'true' : 'false' }},{{ $item->sort_order }})"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-sm btn-secondary" onclick="editMenuItem({{ $item->id }},{{ json_encode($item->label) }},{{ json_encode($item->type) }},{{ json_encode($item->ref) }},{{ json_encode($item->link_url) }},{{ $item->is_active ? 'true' : 'false' }},{{ $item->sort_order }},{{ json_encode($item->icon) }})"><i class="fas fa-edit"></i></button>
                             <form action="{{ route('admin.menu.destroy', $item) }}" method="POST" onsubmit="return confirmDelete('Remove this menu item from the storefront?')" style="display:inline">@csrf @method('DELETE')<button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></form>
                         </td>
                     </tr>
                     @empty
-                    <tr><td colspan="6" style="text-align:center;color:var(--text-light);padding:24px">No menu items.</td></tr>
+                    <tr><td colspan="7" style="text-align:center;color:var(--text-light);padding:24px">No menu items.</td></tr>
                     @endforelse
                 </tbody>
             </table>
@@ -43,9 +50,20 @@
 
 <div id="menuModal" class="modal">
     <div class="modal-header"><h2 id="menuModalTitle">Add Menu Item</h2><button class="modal-close" onclick="closeAllModals()">&times;</button></div>
-    <form id="menuForm" method="POST" action="{{ route('admin.menu.store') }}">@csrf<div id="menuMethod"></div>
+    <form id="menuForm" method="POST" action="{{ route('admin.menu.store') }}" enctype="multipart/form-data">@csrf<div id="menuMethod"></div>
     <div class="modal-body">
-        <div class="form-group"><label>Label</label><input type="text" name="label" class="form-control" placeholder="e.g. SUNGLASSES" required></div>
+        <div class="form-group"><label>Label / Name</label><input type="text" name="label" class="form-control" placeholder="e.g. SUNGLASSES"></div>
+
+        <div class="form-group">
+            <label>Icon Image (PNG / SVG)</label>
+            <input type="file" name="icon" id="menuIconInput" class="form-control" accept=".png,.svg,image/png,image/svg+xml" onchange="previewMenuIcon(this)">
+            <small style="color:var(--text-light)">Optional. Upload a PNG or SVG icon to show it in the menu instead of (or next to) the name.</small>
+            <div style="margin-top:10px;display:flex;align-items:center;gap:14px">
+                <img id="menuIconPreview" src="" alt="" style="width:44px;height:44px;object-fit:contain;border:1px solid rgba(0,0,0,.12);border-radius:8px;padding:4px;background:#fff;display:none">
+                <label style="display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--text-secondary)"><input type="checkbox" name="remove_icon" id="removeIconChk"> Remove icon</label>
+            </div>
+        </div>
+
         <div class="form-group">
             <label>Type</label>
             <select name="type" id="menuType" class="form-control" onchange="syncMenuType()">
@@ -102,7 +120,18 @@ function syncMenuType(){
     show('menuRefCollection', t === 'collection');
     show('menuRefUrl', t === 'custom');
 }
-function editMenuItem(id,label,type,ref,link,active,order){
+function previewMenuIcon(input){
+    const preview = document.getElementById('menuIconPreview');
+    if (input.files && input.files[0]) {
+        preview.src = URL.createObjectURL(input.files[0]);
+        preview.style.display = 'block';
+    } else {
+        preview.src = '';
+        preview.style.display = 'none';
+    }
+    document.getElementById('removeIconChk').checked = false;
+}
+function editMenuItem(id,label,type,ref,link,active,order,icon){
     document.getElementById('menuModalTitle').textContent = 'Edit Menu Item';
     const f = document.getElementById('menuForm');
     f.action = '/admin/menu/' + id;
@@ -111,6 +140,17 @@ function editMenuItem(id,label,type,ref,link,active,order){
     f.querySelector('[name=type]').value = type;
     f.querySelector('[name=sort_order]').value = order;
     f.querySelector('[name=is_active]').checked = active;
+    f.querySelector('[name=icon]').value = '';
+    document.getElementById('menuIconInput').value = '';
+    document.getElementById('removeIconChk').checked = false;
+    const preview = document.getElementById('menuIconPreview');
+    if (icon) {
+        preview.src = icon;
+        preview.style.display = 'block';
+    } else {
+        preview.src = '';
+        preview.style.display = 'none';
+    }
     syncMenuType();
     if (type === 'category' || type === 'brand') {
         f.querySelector('#menuRefCategory select').value = type === 'category' ? (ref || '') : '';
@@ -128,6 +168,11 @@ function resetMenuForm(){
     document.getElementById('menuMethod').innerHTML = '';
     document.getElementById('menuForm').reset();
     document.getElementById('ma').checked = true;
+    document.getElementById('menuIconInput').value = '';
+    document.getElementById('removeIconChk').checked = false;
+    const preview = document.getElementById('menuIconPreview');
+    preview.src = '';
+    preview.style.display = 'none';
     syncMenuType();
     openModal('menuModal');
 }

@@ -28,11 +28,28 @@ class SettingsController extends Controller
             'trust_2_text' => 'nullable|string|max:200',
             'trust_3_title' => 'nullable|string|max:100',
             'trust_3_text' => 'nullable|string|max:200',
+            'social_facebook' => 'nullable|url|max:255',
+            'social_instagram' => 'nullable|url|max:255',
+            'social_youtube' => 'nullable|url|max:255',
+            'social_linkedin' => 'nullable|url|max:255',
+            'social_whatsapp' => 'nullable|url|max:255',
+            'social_twitter' => 'nullable|url|max:255',
         ]);
+
+        $socialKeys = [
+            'social_facebook',
+            'social_instagram',
+            'social_youtube',
+            'social_linkedin',
+            'social_whatsapp',
+            'social_twitter',
+        ];
 
         foreach ($validated as $key => $value) {
             if ($value !== null) {
                 Setting::set($key, $value);
+            } elseif (in_array($key, $socialKeys, true)) {
+                Setting::set($key, '');
             }
         }
 

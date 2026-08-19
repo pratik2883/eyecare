@@ -280,6 +280,13 @@ body {
     color: var(--plum);
 }
 
+.menu-item-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .expand-icon {
     font-size: 1.2rem;
     font-weight: 300;
@@ -609,7 +616,7 @@ body {
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 5vw, 4.2rem);
     font-weight: 700;
     color: var(--warm-white);
     margin-bottom: 12px;
@@ -617,7 +624,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.6vw, 1.35rem);
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 28px;
     font-weight: 300;
@@ -626,12 +633,12 @@ body {
 
 .hero-cta {
     display: inline-block;
-    padding: 14px 40px;
+    padding: clamp(12px, 1.6vw, 18px) clamp(36px, 5vw, 56px);
     background: var(--warm-white);
     color: var(--charcoal);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
     letter-spacing: 2px;
     border-radius: 0;
     text-transform: uppercase;
@@ -1192,11 +1199,14 @@ body {
 /* Tablet Portrait (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .hero-section {
-        height: 40vh;
-        min-height: 320px;
+        height: 46vh;
+        min-height: 380px;
     }
     .hero-title {
-        font-size: 2.8rem;
+        font-size: clamp(2.4rem, 5.5vw, 3.2rem);
+    }
+    .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
     }
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1207,6 +1217,31 @@ body {
     }
     .modal-grid {
         grid-template-columns: 1fr;
+    }
+    /* Categories: horizontal scroll -> grid */
+    .categories-carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 4px 24px 28px;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+    .category-card {
+        flex: none;
+        padding: 28px 18px;
+    }
+    .category-icon {
+        width: 64px;
+        height: 64px;
+        min-height: 44px;
+        font-size: 1.6rem;
+    }
+    .category-card span {
+        font-size: 0.95rem;
+    }
+    .category-count {
+        font-size: 0.8rem;
     }
 }
 
@@ -1223,13 +1258,41 @@ body {
         min-height: 320px;
     }
     .hero-title {
-        font-size: 3.2rem;
+        font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+    }
+    .hero-subtitle {
+        font-size: clamp(1rem, 1.6vw, 1.4rem);
     }
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
     }
     .promo-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    /* Categories: grid with all in one row */
+    .categories-carousel {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        padding: 4px 24px 32px;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+    .category-card {
+        flex: none;
+        padding: 32px 20px;
+    }
+    .category-icon {
+        width: 72px;
+        height: 72px;
+        min-height: 44px;
+        font-size: 1.8rem;
+    }
+    .category-card span {
+        font-size: 1.05rem;
+    }
+    .category-count {
+        font-size: 0.85rem;
     }
 }
 
@@ -1242,8 +1305,54 @@ body {
     .product-grid {
         grid-template-columns: repeat(5, 1fr);
     }
+}
+
+/* Portrait tablet & tall ad/kiosk boards (like McDonald's/KFC digital menu boards) */
+@media (min-width: 768px) and (orientation: portrait) {
+    .hero-section {
+        height: auto;
+        aspect-ratio: 3 / 2;
+        min-height: 0;
+    }
+    .hero-title {
+        font-size: clamp(2.6rem, 6.5vw, 4.8rem);
+    }
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.2vw, 1.6rem);
+    }
+    .hero-cta {
+        padding: clamp(14px, 2.2vw, 22px) clamp(44px, 6vw, 68px);
+        font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    }
+    .hero-indicators {
+        bottom: 26px;
+    }
+}
+
+/* Tall portrait ad boards (>= 1024px wide): bigger categories + premium product grid */
+@media (min-width: 1024px) and (orientation: portrait) {
     .categories-carousel {
-        justify-content: center;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .product-brand {
+        font-size: 0.95rem;
+    }
+    .product-model {
+        font-size: 0.8rem;
+    }
+    .product-price {
+        font-size: 1.05rem;
+    }
+    .btn-view-more {
+        font-size: 0.85rem;
+        padding: 12px;
     }
 }
 
@@ -1868,7 +1977,7 @@ body {
     border: none;
     outline: none;
     font-size: 1rem;
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     background: transparent;
     color: var(--charcoal);
 }

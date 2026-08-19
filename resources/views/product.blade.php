@@ -187,7 +187,7 @@
                     <h3 class="product-brand">{{ $rp->brand->name ?? 'Luxury Brand' }}</h3>
                     <p class="product-model">{{ $rp->model_number }}</p>
                     <p class="product-price">
-                        @if($rp->sale_price)
+                        @if($rp->sale_price && $rp->sale_price < $rp->price)
                         <span class="original">₹{{ number_format((float) $rp->price, 0) }}</span> ₹{{ number_format((float) $rp->sale_price, 0) }}
                         @else
                         ₹{{ number_format((float) $rp->price, 0) }}

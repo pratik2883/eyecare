@@ -46,6 +46,12 @@ class StorefrontSeeder extends Seeder
             'section_categories_title' => 'Categories',
             'section_offers_title' => 'Offers & Highlights',
             'section_collection_title' => 'Our Collection',
+            'social_facebook' => '',
+            'social_instagram' => '',
+            'social_youtube' => '',
+            'social_linkedin' => '',
+            'social_whatsapp' => '',
+            'social_twitter' => '',
         ];
 
         foreach ($defaults as $key => $value) {
