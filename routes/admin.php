@@ -39,6 +39,7 @@ Route::prefix('admin')->name('admin.')->middleware('web')->group(function () {
         Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
         Route::get('/inventory/create', [InventoryController::class, 'create'])->name('inventory.create');
         Route::post('/inventory', [InventoryController::class, 'store'])->name('inventory.store');
+        Route::post('/inventory/bulk-destroy', [InventoryController::class, 'bulkDestroy'])->name('inventory.bulk-destroy');
         Route::get('/inventory/{inventory}/edit', [InventoryController::class, 'edit'])->name('inventory.edit');
         Route::put('/inventory/{inventory}', [InventoryController::class, 'update'])->name('inventory.update');
         Route::delete('/inventory/{inventory}', [InventoryController::class, 'destroy'])->name('inventory.destroy');

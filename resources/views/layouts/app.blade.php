@@ -10,11 +10,14 @@
     <meta name="apple-mobile-web-app-title" content="{{ setting('app_name', 'EyeCare Studio') }}">
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="192x192" href="{{ asset('images/icon-192.png') }}">
+    <link rel="apple-touch-icon" sizes="512x512" href="{{ asset('images/icon-512.png') }}">
     <title>@yield('title', setting('app_name', config('app.name', 'EyeCare Studio')))</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') . '?v=10' }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') . '?v=11' }}">
     @stack('styles')
 </head>
 <body>
@@ -22,7 +25,7 @@
         <i class="fas fa-wifi-slash"></i> No internet connection. Showing cached data.
     </div>
 
-    {{-- PWA install banner --}}
+    {{-- PWA install banner (Android/Chrome) --}}
     <div id="installBanner" class="install-banner" style="display:none">
         <img src="{{ asset('images/icon-192.png') }}" alt="{{ setting('app_name', 'EyeCare Studio') }}" width="40" height="40">
         <div class="install-banner-info">
@@ -31,6 +34,16 @@
         </div>
         <button class="install-banner-btn" id="installBtn">Install</button>
         <button class="install-banner-close" aria-label="Dismiss" onclick="this.closest('#installBanner').style.display='none'">&times;</button>
+    </div>
+
+    {{-- PWA install banner (iOS Safari) --}}
+    <div id="iosInstallBanner" class="install-banner" style="display:none">
+        <img src="{{ asset('images/icon-192.png') }}" alt="{{ setting('app_name', 'EyeCare Studio') }}" width="40" height="40">
+        <div class="install-banner-info">
+            <strong>Install {{ setting('app_name', 'EyeCare Studio') }}</strong>
+            <span>Tap <i class="fas fa-share-square"></i> Share &amp; select <strong>"Add to Home Screen"</strong></span>
+        </div>
+        <button class="install-banner-close" aria-label="Dismiss" onclick="localStorage.setItem('gem_ios_prompt_dismissed','1');this.closest('#iosInstallBanner').style.display='none'">&times;</button>
     </div>
 
     {{-- PWA update toast --}}
@@ -145,6 +158,14 @@
                 const banner = document.getElementById('installBanner');
                 if (banner) banner.style.display = 'none';
             });
+
+            // ─── iOS Safari Prompt Detection ───
+            const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            if (isIos && isSafari && !localStorage.getItem('gem_ios_prompt_dismissed')) {
+                const iosBanner = document.getElementById('iosInstallBanner');
+                if (iosBanner) iosBanner.style.display = 'flex';
+            }
         }
 
         // ─── New-version Update Toast ───

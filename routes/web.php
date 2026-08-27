@@ -23,9 +23,11 @@ Route::get('/manifest.json', function () {
         'start_url' => '/',
         'scope' => '/',
         'display' => 'standalone',
+        'orientation' => 'any',
         'background_color' => '#1A1A1A',
         'theme_color' => '#1A1A1A',
         'lang' => 'en',
+        'prefer_related_applications' => false,
         'categories' => ['shopping', 'lifestyle'],
         'icons' => [
             ['src' => '/images/icon-192.png', 'sizes' => '192x192', 'type' => 'image/png', 'purpose' => 'any'],

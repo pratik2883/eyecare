@@ -1,10 +1,10 @@
-const CACHE_NAME = 'gem-opticals-v6';
-const STATIC_CACHE = 'gem-static-v6';
-const API_CACHE = 'gem-api-v6';
+const CACHE_NAME = 'gem-opticals-v7';
+const STATIC_CACHE = 'gem-static-v7';
+const API_CACHE = 'gem-api-v7';
 
 const STATIC_URLS = [
   '/',
-  '/css/app.css?v=6',
+  '/css/app.css',
   '/css/admin.css',
   '/js/admin.js',
   '/favicon.ico',

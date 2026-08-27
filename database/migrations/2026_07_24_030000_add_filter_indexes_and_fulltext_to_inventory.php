@@ -17,7 +17,9 @@ return new class extends Migration
             $table->index('frame_size', 'idx_inventory_frame_size');
         });
 
-        DB::statement('ALTER TABLE inventory ADD FULLTEXT INDEX ft_inventory_search (model_number, bq_number)');
+        if (DB::getDriverName() === 'mysql') {
+            DB::statement('ALTER TABLE inventory ADD FULLTEXT INDEX ft_inventory_search (model_number, bq_number)');
+        }
     }
 
     public function down(): void
@@ -30,6 +32,8 @@ return new class extends Migration
             $table->dropIndex('idx_inventory_frame_size');
         });
 
-        DB::statement('ALTER TABLE inventory DROP INDEX ft_inventory_search');
+        if (DB::getDriverName() === 'mysql') {
+            DB::statement('ALTER TABLE inventory DROP INDEX ft_inventory_search');
+        }
     }
 };

@@ -220,10 +220,60 @@ class InventoryController extends Controller
 
     public function destroy(Inventory $inventory)
     {
+        if ($inventory->image_url && str_contains($inventory->image_url, '/storage/products/')) {
+            $oldPath = str_replace('/storage/', '', $inventory->image_url);
+            if (Storage::disk('public')->exists($oldPath)) {
+                Storage::disk('public')->delete($oldPath);
+            }
+        }
+
+        foreach ($inventory->additional_images ?? [] as $old) {
+            if (str_contains($old, '/storage/products/')) {
+                $oldPath = str_replace('/storage/', '', $old);
+                if (Storage::disk('public')->exists($oldPath)) {
+                    Storage::disk('public')->delete($oldPath);
+                }
+            }
+        }
+
         $inventory->delete();
 
         Cache::forget('filter_options');
 
         return redirect()->route('admin.inventory.index')->with('success', 'Product deleted.');
+    }
+
+    public function bulkDestroy(Request $request)
+    {
+        $data = $request->validate([
+            'ids' => 'required|array',
+            'ids.*' => 'required|integer|exists:inventory,id',
+        ]);
+
+        $products = Inventory::whereIn('id', $data['ids'])->get();
+
+        foreach ($products as $inventory) {
+            if ($inventory->image_url && str_contains($inventory->image_url, '/storage/products/')) {
+                $oldPath = str_replace('/storage/', '', $inventory->image_url);
+                if (Storage::disk('public')->exists($oldPath)) {
+                    Storage::disk('public')->delete($oldPath);
+                }
+            }
+
+            foreach ($inventory->additional_images ?? [] as $old) {
+                if (str_contains($old, '/storage/products/')) {
+                    $oldPath = str_replace('/storage/', '', $old);
+                    if (Storage::disk('public')->exists($oldPath)) {
+                        Storage::disk('public')->delete($oldPath);
+                    }
+                }
+            }
+        }
+
+        $count = Inventory::whereIn('id', $data['ids'])->delete();
+
+        Cache::forget('filter_options');
+
+        return redirect()->route('admin.inventory.index')->with('success', "{$count} product(s) deleted successfully.");
     }
 }

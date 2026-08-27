@@ -160,8 +160,10 @@ class InventoryController extends Controller
         if ($request->filled('search') && !in_array('search', $skip, true)) {
             $s = $request->search;
             $query->where(function ($q) use ($s) {
-                $q->whereRaw('MATCH(model_number, bq_number) AGAINST(? IN BOOLEAN MODE)', [$s])
-                  ->orWhere('model_number', 'like', "%{$s}%")
+                if (\Illuminate\Support\Facades\DB::getDriverName() === 'mysql') {
+                    $q->whereRaw('MATCH(model_number, bq_number) AGAINST(? IN BOOLEAN MODE)', [$s]);
+                }
+                $q->orWhere('model_number', 'like', "%{$s}%")
                   ->orWhere('bq_number', 'like', "%{$s}%")
                   ->orWhereHas('brand', function ($b) use ($s) {
                       $b->where('name', 'like', "%{$s}%")

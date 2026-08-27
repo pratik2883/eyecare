@@ -40,9 +40,12 @@ class AppServiceProvider extends ServiceProvider
             $shapesByCat = Inventory::where('is_active', true)
                 ->whereNotNull('frame_shape')
                 ->where('frame_shape', '!=', '')
-                ->selectRaw('category, group_concat(distinct frame_shape order by frame_shape separator "|") as shapes')
+                ->select('category', 'frame_shape')
+                ->distinct()
+                ->orderBy('frame_shape')
+                ->get()
                 ->groupBy('category')
-                ->pluck('shapes', 'category');
+                ->map(fn ($group) => $group->pluck('frame_shape')->implode('|'));
 
             $view->with('menuItems', $items)->with('menuShapesByCategory', $shapesByCat);
         });
