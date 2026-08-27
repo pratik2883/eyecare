@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        \Illuminate\Pagination\Paginator::useBootstrapFour();
+
         Inventory::observe(InventoryObserver::class);
 
         View::composer('*', function ($view) {

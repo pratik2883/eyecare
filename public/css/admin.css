@@ -541,17 +541,20 @@ textarea.form-control{resize:vertical;min-height:80px}
 .delta-new{color:#1b5e20;font-weight:700}
 .delta-more{font-size:.68rem;color:var(--text-light);align-self:center}
 
-/* Pagination & SVG Icon Sizing Fix */
-nav[role="navigation"] svg,
-.pagination svg,
+/* Universal SVG Arrow & Pagination Fix */
+svg,
 svg.w-5,
 svg.h-5,
 .w-5,
-.h-5 {
-  width: 1.25rem !important;
-  height: 1.25rem !important;
-  max-width: 1.25rem !important;
-  max-height: 1.25rem !important;
+.h-5,
+nav[role="navigation"] svg,
+.pagination svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
   display: inline-block !important;
   vertical-align: middle !important;
 }
@@ -591,6 +594,36 @@ nav[role="navigation"] a.relative:hover {
 }
 
 nav[role="navigation"] span[aria-current="page"] > span {
+  background: var(--plum) !important;
+  color: var(--warm-white) !important;
+  border-color: var(--plum) !important;
+}
+
+ul.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+ul.pagination li.page-item a.page-link,
+ul.pagination li.page-item span.page-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px 12px !important;
+  font-size: 0.82rem !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid var(--border) !important;
+  background: var(--warm-white) !important;
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+ul.pagination li.page-item.active span.page-link,
+ul.pagination li.page-item a.page-link:hover {
   background: var(--plum) !important;
   color: var(--warm-white) !important;
   border-color: var(--plum) !important;
