@@ -8,7 +8,7 @@ use App\Models\Inventory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Maatwebsite\Excel\Facades\Excel;
+use App\Services\SimpleExcelReader;
 
 class BulkImportController extends Controller
 {
@@ -19,13 +19,24 @@ class BulkImportController extends Controller
 
     public function preview(Request $request)
     {
-        $request->validate(['file' => 'required|file|mimes:xlsx,xls,csv']);
+        $request->validate(['file' => 'required|file|mimes:xlsx,xls,csv,txt']);
 
-        $rows = Excel::toArray([], $request->file('file'));
-        $sheet = $rows[0] ?? [];
+        $file = $request->file('file');
+        $sheet = [];
+
+        if (app()->bound('excel')) {
+            try {
+                $rows = \Maatwebsite\Excel\Facades\Excel::toArray([], $file);
+                $sheet = $rows[0] ?? [];
+            } catch (\Throwable $e) {
+                $sheet = SimpleExcelReader::read($file->getRealPath());
+            }
+        } else {
+            $sheet = SimpleExcelReader::read($file->getRealPath());
+        }
 
         if (empty($sheet)) {
-            return back()->with('error', 'Excel file is empty.');
+            return back()->with('error', 'Excel or CSV file is empty or could not be parsed.');
         }
 
         $headers = array_shift($sheet);
